@@ -56,6 +56,8 @@ function App() {
                     />
                 }) : <p className={styles.message}>Список гостей пока пуст</p>
             }
+
+            <h2 className={styles.counter}>Общее количество гостей - {guests.reduce((acc, curr) => acc + curr.guestsCount, 0)}</h2>
         </div>
     );
 }
